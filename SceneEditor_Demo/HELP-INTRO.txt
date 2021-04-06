@@ -1,0 +1,206 @@
+use arrow keys or scroll bar to view entire text
+
+			     WELCOME! 
+
+Welcome to the world of the TURBO PLUS EXTENSION, a new AMOS and AMOS 
+Professional high-speed extension!  This program is a feature list and a 
+full working demo of the TURBO PLUS Scene Editor!
+
+
+   		  -----TURBO PLUS EXTENSION-----
+
+OVER 130 new commands!  You will see that TURBO PLUS is NOT A TOME CLONE!
+TURBO PLUS covers everything from super fast map drawing (scenes in TURBO
+PLUS), interrupt driven starfields, truly smooth scrolling controlled under
+interrupts (up to 96 zones with one command!) and MUCH more!  There are lots
+of system enhancements and speed ups - check out this list:
+
+Faster graphics commands:
+	F Plot, F Point, Boxes, Circles, all 2 to almost 6 times faster!
+	Blit Clear, clear all or some bitplanes almost twice as fast! 
+
+3D line drawing:
+	set vanishing point and quickly draw lines in 3D space!
+
+Faster Zone commands:
+	Hit Spr Zone(dx,dy,n) checks to see if sprite N enters a zone, with
+	offsets of dx,dy to the hotspot - shorter and faster than in AMOS. 
+	Same command exists for bobs!
+
+Fast Check commands:
+	Like AMOS Zones, but allowing you to specify a range of zones to check, 
+	if you don't need to check them all - much faster than AMOS!  Even
+	check a particular range of zones for a sprite or bob with an offset
+	to its hot spot - with just one quick command!
+
+
+			PLUS MISCELLANEOUS COMMANDS!
+
+Multi Yes/Multi No - turn off multitasking for much better screen
+	synchonization.  Bobs stop 'sticking', updates are smoother.  Also
+	gives your program more execution time!  Also, Amos Pri for setting
+	the priority exactly!
+
+Vbl Wait - why should you wait for line 0 to be reached with Wait Vbl?
+	If you only have a display reaching down to line 240, you are wasting
+	processor time (scanlines) waiting for line 0.  Use Vbl Wait to wait
+	for ANY scanline and let your program run the rest of the time.
+	Smoother screen synch and time saved for AMOS!
+
+Left Click - return true if mouse button being pressed - even if
+	multitasking is disabled!  Similar command exists for keyboard!
+
+Workbench Open - reopen the Workbench after issuing Close Workbench.
+	This command was conspicuously lacking in AMOS! 
+
+Byte Hunt - search a range of memory three possible ways!  Search any area
+	of memory for a RANGE of bytes.  Check for a byte, or check for first
+	memory location with a byte WITHIN the specified range, or search for
+	first location with a byte OUTSIDE the specified range.  Much more
+	versatile than AMOS's Hunt.
+
+Memory Fill - fill range of bytes with a string variable, repeated as many
+	times as necessary.  Very useful to fill an area of memory with a range
+	of values.  Using Chr$($A)+Chr$(8)+Chr$(2) would fill with A82A82A82...
+
+Texp - extremely useful command - evaluate an expression.  If its true,
+	return one value, if its false, return another.  Much more useful than
+	AMOS's way of returning -1 or 0.  Have it return 20 and -4 for use in
+	your algorithm, if you need those values.  Useful to return -1 and 1.
+
+Range - return a variable adjusted to fit within a range.  Replaces:
+	x=Min(highvalue,Max(var,lowvalue)) or:
+	if x>highvalue then x=highvalue
+	if x<lowvalue then x=lowvalue
+	with one simple command
+
+Between - return if a value is between two numbers.  Function still works
+	if the two numbers are not in low/high order.
+
+T Clip - clip a value at a certain interval.  Works with any interval,
+	whether even, odd, power of 2 or not.
+	Replaces: val=(val/clipint)*clipint
+	with a simple command.
+
+Bank End - return the address of the end of a bank.  Works 3 different ways,
+	depending on the type of bank!
+
+Bit operations - a whole range of commands:
+	Lsl.b, Lsl.w, Lsl.l, Lsr.b, Lsr.w, Lsr.l for logical bit shifting
+	L Swap, swap lower half of longword with upper
+	Test.b, Test.w for testing parts of bytes
+	Cpu Info & Math Info for determining CPU type
+	Bit Field Extraction and insertion for datafields!
+
+Bitplane operations for restricting drawing to certain bitplanes, shifting
+	bitplanes for effects, offsetting, swapping, even rotating bitplanes!
+
+
+			STARFIELD commands!
+
+Have TURBO PLUS take all the work out of starfields!  Create a starfield
+with hundreds of stars.  Give them all individual paths and speeds, and set
+them flying.  Control them yourself, or under interrupts!  Your AMOS 
+program can keep on running while TURBO PLUS handles a full starfield!  
+Change speed and direction of stars while they are moving, even change a 
+whole RANGE of them with just ONE fast command!  
+
+
+			  VECTOR OBJECTS
+
+Define 2 dimensional vector objects, draw, move, and scale them in real 
+time!  Save them to disk for later reloading.  They are drawn extremely 
+quickly!
+
+
+			TURBO STATIC BLOCKS
+
+Use TURBO Put Block to draw normal blocks faster than AMOS.  Or convert your 
+normal AMOS linked list of blocks to a TURBO static list for an even greater 
+speed up!  The more blocks, the faster - (several times faster!)
+
+
+			   FASTER ICONS
+
+Display icons at almost 4 times normal speed!  If you have a faster 
+processor (A1200 or better), you can display them even faster (about 5 
+times) by not using the blitter at all!
+Functions are included to return the width & height of an icon, the number 
+of bitplanes it uses, even if an icon is defined or not (no more errors from 
+pasting a non-defined icon)  Works 3 ways to return Exists, Mask, No mask.
+
+
+			  SCENES! (mapping)
+
+Create and manipulate huge, very memory efficient levels using maps built
+up from icons.  Use the fast and intuitive TURBO PLUS scene editor to create 
+your scenes and icon banks, then use TURBO PLUS commands to draw them in 
+your programs.  Currently they operate at 2-3 times other package's speed 
+(work with PRO! and are getting faster!)  Use several icon banks with 
+your scene commands, and multiple scene banks!  Load only part of the
+icon bank palette into the current screen if you like!  Define scene 
+parameters and have TURBO PLUS slam them on-screen at hyperspeed!  Several
+different ways exist to display and move about in your scenes.
+
+
+			SMOOTH, FAST SCROLLING!
+
+At last AMOS can SMOOTHLY SCROLL!
+Imagine defining up to 96 screen zones and scrolling them SMOOTHLY!
+Set up as many zones as you like.  Then use Multi Blit start To end to 
+scroll them all at once, at TURBO speed!  Or use Blit Int start to end to 
+scroll them all at once, under interrupt control!  Your program can 
+continue on while the scrolls happen during the vertical blank!
+Commands exist to change the speed of a scroll without redefining it, also  
+for changing the scrolling zones that are being executed without actually 
+stopping the interrupt, for ultra smooth transitions!
+
+
+			FULL COLOR GRAPHIC TEXT!
+
+TURBO PLUS provides color text support as well!  Use the supplied Font 
+Utility to grab fonts from IFF screens in several different ways.  Assign a 
+character to print with each graphic element, save the bank and your all set 
+to use them in your programs.  Beautiful full color scroll texts can be 
+yours, title screens come to life.  
+
+TURBO PLUS comes with lots of demos and a thorough manual.  A full font disk 
+is included with the TURBO PLUS system as well, to get your started on your 
+way.  
+
+We know you'll love TURBO PLUS for AMOS AND AMOS PROFESSIONAL!  There is 
+nothing like it in the world!  If you have any questions
+or would like to get a copy contact us at the address below.
+		         
+This file was released Feb 20, 1994.  If this file is older than a month, 
+contact us for features we've added!  We are working on Scene Animation, 
+single commands to scroll through scenes, unsorted array searching, FAST 
+sequential file reading, REAL TIME 3D vector objects, quick pasting of
+one scene into another (like Briks), speed up BOBS, 4 button joystick
+commands, scene scanning from a position for a certain icon, or lack of
+icon, scene flooding, Proximity Detection (faster collision detection!),
+fast ROTATION of BOBs and ICONs, any angle!,  and MUCH more!  We routinely
+go through the AMOS commands to make them faster!  Call or write with
+MORE suggestions!
+
+NOTHING comes close to TURBO PLUS for both AMOS and AMOS Pro!
+
+CONTACT US NOW! 
+
+             PLAYFIELD!                     The Mr AMOS Club
+           PO Box 450884                     8 Magnolia Park   
+       Sunrise FL 33345-0884                     Dunmurry
+       (305) 846-7969 VOICE                       Befast
+        (305) 846-8388 FAX                       BT17 ODS
+        (305) 456-0126 BBS                      N Ireland
+           AMOS Network                        0232 626694
+      International Conference
+
+PLAYFIELD! produces a newsletter entirely devoted to AMOS!  TURBO PLUS 
+users are fully supported through PLAYFIELD! and by calling or writing 
+any time.  The Mr AMOS Club produces a high quality disk magazine and
+fully supports AMOS users throughout the world!
+You will not find better support anywhere than PLAYFIELD! and Mr AMOS!
+
+now close this window to enter the TURBO PLUS SCENE EDITOR!
+Press HELP at any time!

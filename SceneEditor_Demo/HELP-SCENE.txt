@@ -1,0 +1,61 @@
+STATUS BAR:
+Scene:   	name of scene file currently being edited
+Tile:		name of the IFF tile file being used
+Size		width and height of the Scene
+Speed    	scrolling speed
+TL 		X,Y scene coordinate of top left hand icon in the visible screen
+XY		X,Y scene coordinate of the mouse pointer 
+Viewport 	The box to the left of TL.  The large box represents entire
+      		scene, small box inside represents the visible screen and
+      		its relative position and size in the scene.
+
+OPTIONS:
+Left Click	draw with current icon or brush
+Right Click	go to Tile Screen
+arrow keys	scroll screen throughout scene
+shift key	increases scroll distance (mouse or key scroll)
+=		(unshifted +) increase scroll speed up to 10
+-		decrease scroll speed
+shift lock	disable scrolling
+F keys		reposition viewport in scene
+Ctrl+F key	set F key to current viewport position 
+
+m	access MENU
+b	cut a BRUSH from the screen
+B	toggle brush mode on/off
+a	toggle AUTOMAZE mode on/off
+space	toggle between walls/halls when automaze is on
+~     	(tilde) access STENCIL menu
+`     	(unshifted tilde) toggle STENCIL on/off. 'S' on status bar=ON
+z	pick new tile from the scene screen
+S	bring up SAVE requester
+L	bring up LOAD requester
+g	draw RECTANGLE with current tile
+f	FILL area with current tile
+R	access RANDOM menu
+r	toggle RANDOM MODE on/off
+p	enter PREVIEW mode
+i	access ICON MANAGER
+
+most used keys, depending on application of course - z, b, B, R, r, g, a
+
+Next release expect full on-line help for every screen and
+MANY more features!
+
+Look for a 32 state automaze mode, for filling the centers as well as walls!
+
+If you wish to use the Scene Editor for a non-TURBO PLUS application, 
+please contact us for information on purchasing a copy.
+
+
+The Scene Editor is (C) 1994 PLAYFIELD! and is part of the
+TURBO PLUS EXTENSION package.  Contact PLAYFIELD! for more information
+on TURBO PLUS and PLAYFIELD! AMOS newsletter. 
+
+                  PLAYFIELD!
+                 PO Box 450884
+             Sunrise FL 33345-0884
+              (305) 846-7969 VOICE
+              (305) 846-8388 FAX
+              (305) 456-0126 BBS 
+       AMOS Network International Conference

@@ -1,0 +1,27 @@
+MENU STRIP:
+Load		Load a scene
+		Scene Editor will load TOME and TAME maps as well as TURBO
+		PLUS scenes.  Scene Editor automatically changes the scene
+		size to match that of the loaded scene.  Note: If you load
+		a scene created with different icons, your display may look
+		garbled.  See Icon Manager for more information. 
+Save		Save a scene
+		Saves your scene to disk.  Use format "filename.Scene"
+Clear		Clear the current scene.
+		You are asked to clear to tile 0 or the current tile.
+		Clear ignores the stencil for speed!
+Def		save the current settings to default startup
+	 	Next time you enter Scene Editor the default file is loaded.
+		It contains the name of the tile screen, the name of the
+		scene, the and position in the scene.  If Scene Editor can
+		reload all of the files successfully, you will be presented
+		with the scene as you left it upon exit.
+Menu		access the main feature MENU
+Preview		access PREVIEW mode
+Icon		access ICON MANAGER
+#		toggle tile grid on/off
+Quit		exit Scene Editor
+
+OPTIONS:
+Left Click	select a tile for drawing
+Right Click	abort selection and return to scene

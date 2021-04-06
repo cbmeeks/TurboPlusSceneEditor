@@ -1,0 +1,38 @@
+Scene Size	Change the dimensions of your scene.  You can change the size
+		by clicking the arrow keys or typing the value in the number
+		box.  Pressing the right mouse button on the arrows will
+		increase or decrease by tens.  Changes won't take affect
+		unless you click the Resize button.  If the desired size
+		is too big for your memory then Scene Editor simply aborts.
+Tile Size	Alternate the tile sizes between 16 x 16 pixel tiles and
+		32 x 32 pixel tiles.  16 x 16 pixel tiles allow more tiles on
+		screen but are take more time for the scene commands to draw.
+		32x32 tiles take less time to draw, but less fit on screen.
+		When you select what you want the computer cuts the current
+		icon screen into the appropriate sizes.  Changes won't take
+		affect unless you click the Resize button.
+Automaze Mode	This feature allows you to draw mazes "on the fly."
+		See AUTOMAZE.  While editing, the space bar alternates this
+		mode between Walls and Walkways.  
+Maze Generator	Access the Maze Generator.  Scene Editor asks for TL & BR.
+		(top left, bottom right) Esc cancels.
+Make Stencil	Bring up STENCIL menu.  You can select a range of tiles
+		that will not be affected by drawing operations.
+Random		This feature allows you to select a range of icons to use
+		for RANDOM mode.  
+Rectangle	Draw a box of tiles on the screen using the current tile held.
+Flood Fill	Fill an area with the currently held tile.
+Grab Brush	Grab a section of tiles from the Map Screen.  See BRUSH below.  
+Load Brush	Load a brush from disk.
+Save Brush	Save the current brush to disk.
+View Brush	View the brush held in memory.
+		Press the left mouse button to exit.
+Use Brush	Use the current brush.  When you select a tile
+		the brush mode is turned off.
+Init Status Bank	Reserve memory for a status bank.
+Save Status	This saves the current status bank to disk.
+Load Status	This loads a status bank from disk and sets up the
+		appropriate values.
+Erase Status	This erases the current status bank from memory.
+About		View credit screen.  
+Cancel		Cancels the entire Menu screen.

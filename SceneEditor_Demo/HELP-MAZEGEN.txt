@@ -1,0 +1,36 @@
+X: and Y:	Display mouse co-ordinates in the maze.
+Exit		Exit Maze Generator.
+2 Color		Save the generated maze in IFF format as a b & w brush.
+Brush/Disk	This cycle gadget alternates between Brush and Disk.  The 
+		state of this gadget determines how the 2 State and 16state 
+		buttons operate.  When Brush is displayed, the maze will be 
+		stored in the current brush.  When you exit Maze Generator,
+		you'll be able to paste the brush.
+		When Disk is displayed, the maze will be saved to disk as a 
+		scene.  Keep in mind scenes and brushes are stored in the same 
+		format and can be used interchangeably.
+2 State		Convert the current maze using tile zero(0) as walkways and
+		the current tile held as walls.  It is then saved to disk or the 
+		current brush, dependant on the cycle gadget above.
+16 State	Convert the current maze using the special 16 state algorithm.  		See AUTOMAZE mode for more information on this state.  After 		convertion, it is saved to disk as a scene or stored as the 
+		current brush, dependant on the cycle gadget above. 
+Define		Change the maze size.  Useful if you wish to change the
+		size after entering Maze Generator.  Warning: this erases the 
+		maze screen entirely!
+Blocks		Draw blocks inside the maze.  Important: Esc key is used to 
+		exit this mode.  If you draw the blocks with the left mouse
+		button, the maze will interpret these as walls of solid tiles.  
+		Right button blocks erase the blocks.  Note: there is nothing 
+		preventing you from placing blocks after maze generation.
+GenMaze		Generate the maze.  Click on the maze to pick the starting 
+		position of the maze.  Esc aborts this mode early, then cleans
+		up the display.  You may restart generation by clicking this 
+		button and picking new start point.  If the new start point is
+		on an already existing path, it will connect to that path.  If
+		it is not on an existing path, the new pathways will not connect 
+		with the old pathways at any point.
+
+NOTE:	Maze Generator creates single exit mazes.  This means if you
+	pick any two points in the maze there will be exactly one path 
+	connecting them.
+
