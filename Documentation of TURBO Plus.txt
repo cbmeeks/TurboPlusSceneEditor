@@ -1,0 +1,1704 @@
+****  SEARCH FOR MEEKS  ****
+
+
+
+This documentation of TURBO Plus is a patched-up version of TURBO V1.0.
+Any reference to PLAYFIELD! and Ryan Scott are no longer valid!
+Since I haven't heard or received any reaction from Ryan Scott for the past
+year, I hereby declare that he has no more rights on distributing/selling
+TURBO Plus.
+
+Since Manuel ANDRE is the only programmer involved with this package,
+he retains the rights to sell or distribute it without further notice.
+
+The Scene Editor and Color Font Editor are not included in this package and
+are © C. B. Meeks.
+
+I would like to apologize to all people who were left behing with no technical
+support and help.
+You can contact me for bugs/help:
+
+	Manuel ANDRE
+	Arbeidersstraat Nr. 9
+	2600	BERCHEM
+	BELGIUM
+
+P.S.: I'm planning to release TURBO Plus in the PUBLIC DOMAIN after I've had the
+      time to update this docfile further.
+      I would be very pleased if you could help me to come up with a better doc/guide.
+
+      The following functions are no longer part of TURBO_Plus :
+	=Xscr Mouse
+	=Yscr Mouse
+	=Xscr Sprite
+	=Yscr Sprite
+	=Inscr Mouse
+      They are now included in the PowerBobs extension.
+
+CONGRATULATIONS!
+
+You have purchased the most powerful AMOS language extension 
+available.  With the TURBO PLUS extension, you can manipulate 
+maps, handle scrolls, and perform complex graphics operations at 
+machine language speeds.  You have a vastly extended array of 
+new useful AMOS commands at your fingertips.  Please read this 
+manual thoroughly as it contains all the useful information you will 
+need to take full advantage of your new command set and utilities.
+
+THANK YOU!
+I have worked very hard to bring TURBO PLUS to the world.
+I appreciate your support greatly.  
+Without you, TURBO PLUS would not exist today!
+TURBO PLUS was created to fill user's needs and requests.
+If you have any ideas for future enhancements/additions, or bug fixes, please
+contact us right away!
+I want to hear from you!
+TURBO will continue to grow and expand as long as there is interaction from you!
+
+Please do not give copies of TURBO to anyone.
+I spent many, many long hours working on this and I think I'm justified
+in earning a fair wage for it.  Do not spread TURBO and I'll continue working
+on it.
+
+
+PLEASE!
+Should you become so enamoured with the TURBO PLUS EXTENSION that you use it
+in your next great mega game, I encourage you to be so kind as to credit me
+and the TURBO PLUS EXTENSION.
+This will generate more interest, more users, and more new commands!
+Support your AMOS community and it will support you!
+
+
+
+DISCLAIMER
+I cannot be held responsible for any damage to you, your computing 
+equipment, your programs, or any data as a result of use of the TURBO 
+PLUS extension, either directly or consequentially as a result of its use.  
+By using the TURBO PLUS extension you agree to these terms and agree not 
+to hold me liable for any damages arising from the use of this package.
+Use the TURBO PLUS extension package at your own risk.
+
+This manual was created with the excellent Devpac 2.14 © HISOFT.
+
+AMOS, AMOS Professional (AMOS Pro), AMOS Compiler, AMOS Professional Compiler
+are all trademarks of Europress Software.
+
+CONTENTS
+
+INTRODUCTION
+	3	Credits
+	5	TURBO History
+	6	INSTALLATION
+		Changes from previous versions
+		Conversion from older TURBO versions
+		Installation of the extension
+
+COMMANDS
+	10	Graphics		24	Starfields
+	12	3D Drawing		26	Vector Objects
+	13	Zones 			29	Blocks
+	14	Check			31	Icons
+	16	Miscellaneous		33	Scenes
+	20	Bitwise Operations	38	Scrolling
+	22	Bitplane Operations
+
+SCENE EDITOR	   42  (not included)
+
+COLOR FONT EDITOR  56  (not included)
+
+APPENDIX		??
+	?	FUTURE of TURBO PLUS
+	?	PLAYFIELD! and TURBO SUPPORT
+	?	Other Products
+
+INDEX
+
+CREDITS
+
+From Manuel Andre:
+	I want to thank all these people mentioned below for their wonderfull
+	support and idea's.  
+	Let's hope this list will grow and grow...
+
+Dominique: my wife.
+
+Michael Cox: Creator of AmoNER and my first contact in the U.S.A.
+	For more info write to :
+					Michael Cox
+					11128 Rock Garden Rd.
+					Fairfax, VA 22030-4935
+					USA
+
+	And last but not least: François. Lionet, the creator of the "CREATOR"!
+
+Ok, now a personal profile :
+Age 			: 28 (born 26/06/1967)
+Married			: with Dominique
+Occupation		: system administator/operator
+			  SIEMENS H90/H100 main-frame
+Hobby's			: programming and programming, programming,...
+Pets			: my dog Joelle
+First computer		: Acorn Electron
+Second			  Sinclair QL
+Third			  AMIGA 500 !!!
+
+Present configuration	: A2000 1MB 52MB HD
+			  A1200 HD40, 030 accell. 'crawling' at 42 Mhz
+			  with 4MB FAAAASSSSSTT RAM.
+
+INSTALLATION
+
+Installation is simple.   The AMOS and AMOSPro versions use slot number 12.  
+If you were running a previous version of the TURBO extension, please be sure 
+to remove it from the extensions list.  In AMOS, the TOME extension does not 
+work with TURBO PLUS and must be removed.  You will most likely rather use 
+TURBO PLUS's richer command set.
+It is strongly recommended that you read this entire chapter before proceeding 
+with the installation.  Operate only with a BACKUP of your system disk!
+
+
+CHANGES from previous versions
+
+Certain commands have changed from earlier versions of the TURBO 
+extension.  Make note of these changes so you can update your older programs 
+successfully.
+
+F Stars command became Stars Draw.
+Object Load Chip became Object Load.
+
+
+CONVERSION from an older TURBO
+
+If you have worked with an older version of the TURBO extension (earlier than 
+v1.9), you must follow this procedure to convert your older TURBO programs to 
+work with your new TURBO PLUS.  
+
+If you do not need to perform the conversion, skip to straight to Installation, and 
+begin installing your new TURBO PLUS extension.  Otherwise, proceed with the 
+conversion process, then install your new TURBO PLUS extension. 
+
+The TURBO PLUS extension library changed slot numbers upon becoming an 
+official extension (v1.9+).  Programs expecting TURBO PLUS in another slot 
+number will not run unless converted.  DO NOT proceed with the Installation 
+until you have performed this conversion process.
+
+To convert your older TURBO programs, you will need to save all of your 
+TURBO programs in ASCII format.  After saving all programs in this manner, 
+perform the installation, then bring the old ASCII saved programs back into 
+memory.
+
+
+CONVERSION PROCESS:
+
+STEP 1: Save your program in ASCII format
+
+In AMOS: 
+Load the program to convert
+Move to the top of the text by pressing Ctrl-Shift and the Up Arrow key 
+Press Ctrl-B to mark the beginning of the text
+Press Ctrl-Shift- Down arrow to move to then end of the text
+Hold Ctrl and use the mouse to click on the top right hand button, Save ASCII
+Save the program in ASCII format as 'filename.ASC', as opposed to 
+'filename.AMOS'
+
+In AMOS Pro:
+Load the program to convert
+Press Ctrl A to select all the text
+Press Ctrl S to store the text
+Press Ctrl Shift A to save the text as an ASCII file.  Save the program in ASCII 
+format as 'filename.ASC', as opposed to 'filename.AMOS'
+
+
+STEP 2: Install the new TURBO PLUS extension
+
+Read the next section, INSTALLATION and perform the necessary operations 
+to install the new TURBO PLUS extension into your AMOS or AMOS Pro 
+system.
+
+STEP 3: Bring your ASCII saved programs back into memory
+
+An ASCII saved program will not contain the banks (graphics, sound, etc) that 
+the original program used for its operation.  You will need to first Load the 
+program in normally using the Load option, erase all the text, then Merge the 
+ASCII saved program into memory:
+
+In AMOS: 
+Load the program to convert.  If you look through the program, or click on test, 
+some commands may say "Extension I".  The program will not run.
+Press Ctrl A to select all the text
+Press Ctrl C to cut the text (it is stored in a buffer)
+The current program now contains just the banks the program used for 
+operation, none of the program text.  We will bring the program text back into 
+the program and it will be tokenized (converted to an internal AMOS format) for 
+the new TURBO PLUS extension
+Hold the Shift Key and use the mouse to select Merge ASCII from the top right 
+hand menu item.
+Select the ASCII version of the program you are converting ('filename.asc' 
+instead of 'filename.AMOS')
+The ASCII text program will be merged into the program window
+Save the program to disk ('filename.AMOS')  (Amiga-S)
+Your program is now converted.  Perform this operation for all relevent 
+programs.
+
+In AMOS Pro:
+Load the program to convert.  If you look through the program, or click on test, 
+some commands may say "Extension I".  The program will not run.
+Press Ctrl A to select all the text
+Press Ctrl C to cut the text (it is stored in a buffer)
+Press Ctrl F to erase the cut text from the buffer (optional if you have lots of free 
+RAM)
+The current program now contains just the banks the program used for 
+operation, none of the program text.  We will bring the program text back into 
+the program and it will be tokenized (converted to an internal AMOS format) for 
+the new TURBO PLUS extension
+Press Amiga-M to Merge an ASCII file into the current program
+Select the ASCII version of the program you are converting ('filename.asc' 
+instead of 'filename.AMOS')
+The ASCII text program will be merged into the program window
+Save the program to disk ('filename.AMOS')  (Amiga-S)
+Your program is now converted.  Perform this operation for all relevent 
+programs.
+
+INSTALLATION
+
+HARD DRIVE USERS:
+You can perform the installation easily right on your hard drive.  See  
+instructions below.
+
+ATTENTION FLOPPY USERS:
+Perform the installation only on a COPY of your system disk!
+Before installing TURBO PLUS, you need to make sure there is enough room 
+on your AMOS or AMOS Pro system disk for TURBO_PLUS.Lib (apx 30,000 
+bytes as of this writing).  If not, you will have to erase or move enough files to 
+make room.
+
+On an AMOS system disk, you can move or erase Config1_3.AMOS to make 
+enough room.  Make sure you have a good copy of this program on another 
+disk for later use.  You will need it for the installation process!
+
+On an AMOS Pro system disk, you can erase Install.AMOS to free up 40,000 
+bytes.  Make sure you keep a good copy somewhere in case you need it at a 
+later date.
+
+After freeing up some space, procede with the installation:
+
+AMOS installation
+
+1	Copy the AMOS_TURBO_PLUS.LIB into the AMOS_SYSTEM drawer.
+2	Load AMOS.
+3	Load and run the CONFIG1_3.AMOS program.
+4	Select 'Load default configuration' from the 'Disc' menu.
+5 	Select 'Loaded extensions' from the 'Set' menu.
+6	Click onto line number 12.  
+	Now enter the path and the name of the new extension.  
+	Ex.: AMOS_SYSTEM/AMOS_TURBO_PLUS.LIB [enter]
+7	Click onto the QUIT gadget.
+8	Select 'Save configuration' from the 'Disc' menu.
+9	Select 'Exit to system' from the 'Amos' menu.
+10	Very Important! You must also change the AMOS1_3_NTSC.ENV and the 
+	RAMOS1_3.ENV configurations in this same way!  Instead of 
+	selecting 'Load default configuration' (step 4 above), select 'Load other 
+	configuration'. 
+
+AMOS PRO installation
+
+1	Copy the AMOSPro_TURBO_PLUS.LIB into the APSYSTEM drawer.  
+	Floppy users: use a COPY of your system disk and erase 
+	Install.AMOS to make enough room for the TURBO PLUS library.
+2	Load AMOSPro.
+3	Load and run the Interpreter_Config.AMOS program.
+4	Select 'Load Default Configuration'. 
+5	Select 'Set Loaded Extensions'.
+6	 Click onto line number 12.
+	Now enter the name of the new extension.
+	AMOSPro_TURBO_Plus.Lib [ENTER]
+7	Click onto the Ok gadget.
+8	Exit the Loaded Extensions setup
+9	Select 'Save configuration'.
+10	Quit the Interpreter_config program.
+11	Exit AMOSPro.
+
+The TURBO Plus Extension is now installed.  Reload your AMOS system.
+
+GRAPHICS
+
+The TURBO PLUS extension introduces an array of enhanced graphics commands.
+Replace older graphics commands with TURBO's graphics commands for an appreciable speed up!
+
+All commands below that are 'Relative' begin their drawing from the current graphics position.  To set 
+the position of the graphics cursor for relative positioning, use the AMOS command Gr Locate x,y.  
+The command may leave the graphics cursor in a different position than where it began, read the 
+descriptions for more information.
+
+F Plot 
+
+F Plot x,y,colour
+This instruction plots a point of colour on the current screen at coordinates X,Y.  It is exactly the 
+same as the normal AMOS Plot instruction, except that it is 2 to 3 times faster than the standard 
+AMOS version and that you must give the COLOUR parameter.  F Plot is fully compatible with the 
+AMOS double buffering process.
+
+=F Point
+
+r=F Point(x,y)
+This function returns the colour register of the pixel located on screen at coordinates X,Y.  It does the 
+same thing as the normal AMOS Point instruction, except that it is 2 to 3 times faster.
+
+R Move
+
+R Move dx,dy
+Relative move of the graphics cursor.
+Example:
+	Gr Locate 10,10 : Rem place graphics cursor at 10,10
+	R Move 5,-5 : Rem graphics cursor is now at 15,5
+Does the same thing as: Gr Locate Xgr+dx,Ygr+dy but is shorter and faster.
+The graphics cursor will be moved to the new position.
+
+R Draw
+
+R Draw dx,dy
+Draw a line relative to the graphics cursor.  Does the same thing as:
+	Gr Locate X,Y
+	Draw To X2,Y2
+but it is shorter and faster.  At the completion of the command, the graphics cursor will be located at 
+the end of the line.
+		
+R Box
+
+R Box dx,dy
+Draw a box relative to the graphics cursor.  Does the same thing as:
+	Box X1,Y2 To X2,Y2
+but it is shorter and faster.   At the completion of the command the position of the graphics cursor 
+remains unchanged.
+
+R Bar
+R Bar dx,dy
+draws a filled bar relative to the graphics cursor. Does the same thing as:
+	Bar X1,Y1 To X2,Y2
+but it is shorter and faster.  The graphics cursor remains unmoved.
+
+F Draw
+F Draw X,Y
+Does the same thing as:
+	Draw To X,Y
+but it is up to 200% faster than the original Draw routine! (1-2 bitplane screen).  The graphics cursor 
+will be moved to the end of the line.  The Set Line MASK command has no effect when using F 
+Draw, this will be corrected in a future update.  It is exactly the same as R Draw X,Y but is included 
+to remain consistent with the F Draw command.
+
+F Draw To
+F Draw x,y To x1,y1
+Does the same thing as:
+	Draw X,Y To X1,Y1
+But it is up to 200% faster than the original Draw routine ! (2 bitplane screen).  The graphics cursor 
+will move to X1,Y1.  The Set Line MASK command currently has no effect when using F Draw.
+	 
+F Circle
+F Circle x,y,radius,colour
+Draw a circle with center at x,y.  Does the same thing as the normal Circle command but this new 
+version is up to 550% faster than the original AMOS BASIC version when drawing large circles.  For 
+smaller circles you get a speed factor of 250 to 400%.
+All parameters are the same as in the normal Circle command except that you must give a colour 
+parameter.  You can currently only use this command in LOWRES screens or HIRES+LACED 
+screens or your circle will actually be an ellipse.  Also, keep the radius of the circle below 180.
+
+Blit Clear
+Blit Clear x
+This is a simple command for clearing any bitplane of a screen.
+If x <0, all bitplanes of a screen will be erased.
+If x >0, clear  bitplane x
+An 8 colour screen has 3 bitplanes, numbered 1 -> 3.
+Blit Clear  is about 80 % faster than the Cls command.
+
+
+
+Three Dimensional Drawing
+
+Line 3d 
+Line 3D x,y,z To x1,y1,z1
+Will draw a line from (X,Y,Z) to (X1,Y1,Z1) in three dimensional space.  To do this I assume a fixed 
+eye position.  Further I take the eye position as the origin.  To form a perspective view, we need to 
+define a 'vanishing point', a theoritical point at which all distant parallel lines meet.  If you were 
+standing on the white lines in the middle of a straight road and you looked along the road towards the 
+horizon, the vanishing point would be where the white line and the two road edges meet.  By taking 
+this eye position, our perspective calculations can be simplified to: X=X*D/Z and Y=Y*D/Z.  Where D 
+is the distance between the eye position and the picture plane (the screen).  The value I use for 
+D=128.  So the greater the value of 'Z' the further away the object and therefore the smaller the 
+resultant 'X' and 'Y' values.  This implies that objects appear smaller at a distance.
+
+Eye 3d
+Eye 3d x,y
+This instruction changes the location of the vanishing point.  If not initialised when using the Line 3d 
+instruction, X will have a value of 160 and Y a value of 100.
+
+ZONES
+
+TURBO PLUS offers an array of faster AMOS Zone compatible commands in addition to TURBO 
+PLUS Check commands for hyper speed screen zone checking.
+
+These commands can be used with the normal AMOS Zone commands.
+
+=Hit Spr Zone
+x=Hit Spr Zone(dx,dy,n)
+Checks if sprite number N enters a zone. DX and DY are optional.  
+DX and DY allow you to specify an offset from the sprite's hot spot.
+This command does the same thing as:
+	A=Hzone(X Sprite(n)+dx,Y Sprite(n)+dy)
+But it is shorter and faster. (20 to 50 %)
+
+=Hit Bob Zone
+x=Hit Bob Zone(dx,dy,n)
+Checks if bob number N enters a zone. DX and DY are optional.  
+DX and DY allow you to specify an offset from the bob's hot spot.
+This command is the same as:
+	A=Zone(X Bob(n)+dx,Y Bob(n)+dy)
+But it is shorter and faster.  (20 to 50 %)
+
+CHECK
+
+CHECK commands are the TURBO version of AMOS Zone commands
+
+These commands are not compatible with the normal Zone commands!  You will most likely rather 
+use these more flexible TURBO commands.
+
+Before defining your screen zones, you will need to reserve enough memory for the various Checks 
+using Reserve Check.  Set Check allows you to define the various Check areas and Check (x,y) lets 
+you check to see if a given coordinate is within a defined Check Zone.   Superfast Bob Check and 
+Sprite Check commands are available for monitoring  objects entering screen zones.
+
+Reserve Check
+Reserve Check x
+Reserves x check ZONES for TURBO zone (CHECK) routines.  Execute this command before 
+Setting any Check zones. 
+
+Check Erase
+Check Erase
+releases the memory used by Reserve Check and erases all definitions.  You must Reserve more 
+Check zones before Setting any after this command.  This operation is performed automatically 
+when you execute Default or exit the AMOS system.
+
+Reset Check
+Reset Check z
+Erases a Check zone's definition.  You must give the zone number.
+
+Set Check
+Set Check z,x1,y1 To x2,y2
+Does the same thing as the Set Zone command.  Define a rectangular screen area to be monitored 
+by the Check commands.  This command sets Check zone Z to lie within screen coordinates X1, Y1 
+to X2, Y2.
+
+=Check
+x=Check (start To end,x,y)
+Checks if the given coordinates X,Y are within a Check zone.  The START and END parameters 
+indicate which zones you want to check.  Ideal if there are many zones and you want to exclude 
+some zones.  Returns 1 is the result is true, 0 if not.
+
+=Hit Spr Check
+x=Hit Spr Check(start To end,dx,dy,n)
+Checks if sprite number N has entered a Check zone.  DX and DY are optional and give a 
+displacement from the sprite's hot spot.  The START and END parameters indicate which zones you 
+want to check.  Ideal if there are many zones and you want to exclude some zones.  Returns 1 is the 
+result is true, 0 if not.
+
+=Hit Bob Check
+x=Hit Bob Check(start To end,dx,dy,n)
+Checks if bob number N has entered a zone.  dx and dy are optional and give a displacement in 
+opposite to the bob's hot spot.  The start and end parameters indicate which zones you want to 
+check. Ideal if there are many zones and you want to exclude some zones.  Returns 1 if  the result is 
+true, 0 if not.
+
+MISCELLANEOUS
+
+Multi Yes
+Sets the priority to normal (0).  Normal multitasking takes place.  
+
+Multi No
+Turn off  the multitasking process, giving more time for your AMOS programs to execute.  This 
+command makes screen synchronization much better.  Warning!  Under AMOS, CTRL-C 
+combination is disabled as well as the entire keyboard!  If your program crashes with Multi No, you 
+will not be able to get to the editor!  Your system will essentially be locked up.  Under AMOS Pro, you 
+can still use CTRL-C and the keyboard.
+	With AMOS it is possible to entirely disable the multitasking process, but with AMOS Pro 
+this is a different case.  Another task is supplying AMOS Pro with VITAL information.  So blocking 
+this task crashes AMOS Pro.  Under AMOS Pro, Multi No sets the priority of AMOS Pro to 20, 
+blocking most tasks, but not blocking the VITAL task.  Screen synchronization is still much smoother 
+than when multitasking is enabled.
+	With Multi No, the keyboard and mouse are disabled.  See Left Click and Raw Key for 
+more information.
+
+Amos Pri 
+Amos Pri  x
+Set the priority of AMOS.  Value ranges from -128 to 20 (see Multi No).  For most uses it is best to 
+keep it at 0, the default value.
+
+=Raw Key
+x=Raw Key(n)
+Does the same thing as the Key State function but works even if multitasking is disabled.  Returns 
+true (-1) if key N is being pressed.  N is the Scancode of the key to be checked.
+Check the AMOS Pro help file under Key State, Scancode, and TABLES for some useful scancodes.  
+To find out other Scancodes run this routine:
+Repeat 
+	T$=Inkey$
+	If T$<>""
+		Home : Cls
+		Print T$,Scancode
+	End If 
+Until Left Click
+Raw Key (69) detects the ESC key.  
+Thanks SyNTAX/TsL for a version of Raw Key that works on all Amigas.
+
+KEY=Is Raw Key
+
+Returns the last key press in raw format.  Beware !  It gives
+different values if the key is pressed or released.
+Works even if multitasking is disabled.
+		  
+=Left Click
+x=Left Click
+With this command you can check for the LEFT mousebutton.  Use this because when multitasking 
+is disabled the Mouse Key function does not work anymore. Returns TRUE if left mouse is pressed.  
+This function has become unnecessary for AMOS Pro since multitasking can not be stopped!  But if 
+you want your programs to be compatible with all AMOS versions and you use Multi No, we strongly 
+suggest you use Left Click.  You may wish to use the following construct:
+
+=Right Click
+x=Right Click
+See Left Click function, but then for right mousebutton.
+
+Multi No
+Repeat
+	'some code
+Until Left Click
+Multi Yes
+
+Workbench Open
+Reopen the Workbench after closing it, assuming there is enough memory available.
+
+Vbl Wait 
+Vbl Wait x
+Wait until the raster beam has reached a given value. 0 <= X <= 256.  AMOS's Wait Vbl doesn't work 
+if you turn multitasking off.  Vbl Wait also gives a better screen synchronization than the original Wait 
+Vbl command.
+Example.:
+'Let's take a standard screen...
+Screen Open 0,320,200,8,Lowres
+'And lot's of scrollers...
+SCROLL_NR=0
+For I=0 To 100 Step 10
+	Inc _SCROLL_NR
+	Blit Store Left 0,SCROLL_NR,0,0 To 320,I,-1
+Next I
+'the maximum Y value of the screen that will be scrolled is 100. The other screen lines will not be 
+affected by the scroll. So there is no point waiting until the raster beam has reached the TOP of your 
+screen before executing your scrollers.
+Repeat
+	'wait until line 101 of your screen is reached
+	Vbl Wait 101
+	'execute the scrolls
+	Multi Blit 1 To 10
+Until Mouse Click
+
+A screen display is made of lines and they are scanned from the top of the display (line 0) to the 
+bottom (line 312 --> PAL, line 262 --> NTSC).   It is possible to alter anything on the screen even if 
+the raster beam is already further than the area of the screen to be changed!  It will become visible 
+during the next scan of the screen.  So you are able to use the SCAN LINES (more processing time) 
+that are not used by the actual screen for displaying more bobs, scrollers, etc, without any annoying 
+flicker on your screen.  Sometimes it takes some experimentation to find the right value.  But a 
+smoother display is guaranteed!		
+
+=Byte Hunt 
+x=Byte Hunt (start To end,action,val1 To val2)
+Byte Hunt searches the memory area defined by the given START and END addresses for certain 
+values defined by VAL1 and VAL2 bytes.  If START is greater than END the addresses are swapped 
+so that the command still works.   Upon finding the requested byte, it returns the address of the byte, 
+or 0 if not found.  The ACTION parameter defines how the search will be performed.
+	If ACTION=0 the Byte Hunt command behaves just like the normal Hunt command.  Only 
+VAL1 is checked for.
+	If ACTION=-1 the Byte Hunt command behaves as a Range Hunt .  It searches for any 
+value lying outside the values VAL1 to VAL2, inclusive.
+	If ACTION=1 the Byte Hunt command behaves as a Range Hunt.  It searches for any 
+value lying inside the values VAL1 to VAL2, inclusive.
+	VAL1 and VAL2 are always included in the search.
+
+
+=Word Hunt
+x=Word Hunt(params)
+  See Byte Hunt(params) but now for word hunting...
+  START and END adress are made automatically even.
+
+=String Hunt
+x=String Hunt(start To end,action,step,string)
+This is a very powerfull string search routine, it will search the given string
+in the memory area defined by the start and end adresses.
+The action parameter has the same meaning as with the Byte/Word Hunt routines.
+The step parameter is used to skip a certain amount of bytes for each comparison.
+When step is negative, this routine will search from end to start!
+
+	
+Memory Fill 
+Memory Fill start To end,"string variable"
+Fill the memory between START and END address with the data held in 'string variable'.  'String 
+variable' may also be represented as such: A$, A$+B$, or any standard string expression.  If START 
+is greater than END the addresses are swapped so that the command still works. 
+If you wish to use this command to fill memory will a pattern of numbers, you can put the numbers 
+into a string variable before executing Memory Fill.
+ex:
+to fill bank 6 with this pattern - 0123401234...
+	A$=""
+	For T= 0 to 4
+		A$=A$+Chr$(T)
+	Next T
+	Memory Fill Start(6) to Bank End (6), A$
+
+Texp
+x=Texp(ex, true val, false val)
+Texp will first evaluate expression EX.  If EX is true (-1), Texp returns TRUEVAL.  If EX is false (0), Texp
+returns FALSEVAL.
+ex:
+	x=Texp (4=3,1,2)
+	'since 4=3 is false, x now equals 2, the falseval
+A useful construct would be:
+	x=Texp(expression,1,-1)
+	'if expression is true, x = 1, else x = -1.
+	'this is in contrast to using just x=(expression) which if true returns -1, else returns 0.
+
+Range
+x=Range(var, lowvalue To highvalue)
+Returns variable var adjusted to fit within lowvalue, highvalue.  It is important to make sure lowvalue 
+is less than highvalue or this function returns erroneous values.
+ex:
+	x=Range(3, 5 to 100)
+	'x now equals 5
+	x=Range(105,5 to 100)
+	'x now equals 100
+	x=Range(40,5 to 100)
+	'x now equals 40
+This function replaces the need for this construct:
+	x=Min(highvalue,Max(var,lowvalue))
+Also, Range can be very useful to replace a construct such as this:
+	Inc X
+	If X<lowvalue Then X=lowvalue
+	If X>highvalue Then X=highvalue
+is functionally the same as
+	X=Range(X+1,lowvalue To highvalue)
+
+=Between
+x=Between(low,value,high)
+Returns true is value is between low and high.
+NOTE:  If high is smaller than low, then these values are exchanged so the function still works.
+This function replaces this AMOS expression:
+	x=((low<value) and (value<high))
+
+=T Clip
+x=T Clip(var,clipat)
+Clip a value at a certain interval.  Used to make a variable a multiple of a certain value.
+	VAR is the value to be clipped (positive or negative allowed)
+	clipat is the 'clip' value (positive value only)
+	
+ex:	T Clip(var,32) will make var a multiple of 32 (0,32,64...).
+	Print T Clip (50,15)
+	returns 45, since 45 is the next lowest multiple of 15
+ 
+This operation is functionally identical to the integer operation:
+	=(var/clipat)*clipat
+
+
+=Chip Largest
+
+LARGEST_CHIP=Chip Largest
+  Return the largest continguous CHIP memory block in bytes.
+
+=Fast Largest
+
+LARGEST_FAST=Fast Largest
+  Return the largest continguous FAST memory block in bytes.
+
+=Bank End
+
+x=Bank End(banknumber)
+Return the address of the end of a memory bank.
+Bank End returns almost the same result as:
+	=Start(banknumber)+Length(banknumber)
+but it has some extra features:
+
+·	If you ask for the Bank End of a Sprite or Icon bank the result will be NEGATIVE.  It gives 
+the negative amount of Sprite/Icon definitions stored in the bank.  =Abs(result) will remove 
+the negative if you wish to use this value.
+·	If the result is positive, the bank does not contain Sprites or Icons.  The result will be the 
+END adress of that bank.
+·	If the result is 0, the bank is only 0 bytes long.  This is only a possibility in AMOS, not 
+AMOS Pro.
+
+If you ask TURBO PLUS to return the Bank End of a bank that is not reserved you will get useless 
+information - you will not get an error.
+
+
+
+MACHINE LEVEL
+and BIT OPERATIONS
+
+=Lsl.b
+x=Lsl.b(value,shift count)
+bytewise logical shift to the left.
+ex.: ANSWER=Lsl.b(value,shift count)
+     A=Lsl.b(5,1)	gives A=10
+     A=Lsl.b(C,1)	gives A=10 with C=5
+
+=Lsl.w
+x=Lsl.w(x,y)
+wordwise logical shift to the left
+
+=Lsl.l
+x=Lsl.w(x,y)
+long logical shift to the left
+
+The same commands exist for logical shifting to the right...
+
+X=Lsr.b(x,y)
+
+X=Lsr.w(x,y)
+
+X=Lsr.l(x,y)
+
+=L Swap
+x=L Swap(x)
+Swap the lower half of the longword with the upper half.
+ex.:	A=$FFFF1111
+	B=L Swap(A) 
+returns B=$1111FFFF
+	
+=Test.b
+x=Test.b(x,y)
+Compares the lower 8 bits of a variable with a given value.  Returns 0 if false, -1 if true.
+AMOS variables are 32 bits wide.  We may use the Test commands to check for a value in only part 
+of that 32 bit wide variable.  To check the lower 8 bits, use Test.b
+Test.b(x,y) is equivalent to the following AMOS code:
+	If (X And $FF) = (Y AND $FF)
+
+=Test.w
+x=Test.w(x,y)
+Compares the lower word (16 bits) of a variable with a given value.  Returns 0 if false, -1 if true.
+Equivalent to the following AMOS code:
+	If (X And $FFFF) = (Y AND $FFFF)
+
+Cpu Info
+x=Cpu Info
+This function returns what cpu-type is in your AMIGA.
+00	plain 68000
+10	68010 processor
+20	68020 processor
+30	68030 processor
+40	68040 processor
+
+=Math Info
+x=Math Info
+This functions returns what type of math coprocessor you have in your AMIGA.
+000	no coprocessor installed
+881	MC68881 coprocessor installed
+882	MC68882 coprocessor installed
+
+=Bit Field Ext
+x=Bit Field Ext(var,startbit,width)
+This function extracts a field of bits from a variable and returns the result.  STARTBIT is the bit where 
+to the start the extraction from and WIDTH indicates how many bits are to be extracted.  This 
+function is very useful in database management and other applications where bit fields contain 
+attributes.
+Extracting a field that would extend beyond the end of a variable causes the function to return a 
+result from STARTBIT through bit 31.  Both the STARTBIT and the WIDTH are interpreted mod 31.
+
+=Bit Field Ins
+x=Bit Field Ins(var,startbit,width,value)
+This function inserts a field of bits into a variable and returns the result.  STARTBIT is the bit where 
+to start the insertion and WIDTH indicates how many bits are to be inserted.  VALUE contains the 
+actual bits to be inserted.  Inserting a field that would extend beyond the end of a variable causes the 
+function to return a result from STARTBIT through bit 31.  Both the STARTBIT and the WIDTH are 
+interpreted mod 31.	
+
+BITPLANE OPERATIONS
+
+Set Planes
+Set Planes mask
+Restricts most drawing operations to a number of bitplanes, defined by the MASK parameter.
+Each bit represents a bitplane.
+Ex.: Set Planes %101, enables planes 1 and 3.
+Always remember to reset the value to 255, else some strange things might happen with the editor 
+window.  All the new BLITTER commands use this parameter.
+ All normal graphic AMOS commands use this parameter.  
+TURBO commands that recognize and use the mask:
+	Multi Blit
+	all Object commands.
+	all Draw routines,R Draw, R Box,... (except F Draw)
+	Blit Clear	if all planes are selected (-1 as param)
+	Blit Left	enables you to scroll only those planes you want to.
+	Blit Int On 	enables you to scroll only those planes you want to.
+TURBO commands where the mask is not recognized:
+	F Draw
+	F Plot
+	F point
+	F Circle
+	Plane Offset
+	Plane Swap
+	Plane Shift Up/Down
+	Plane Update
+	all Icon commands
+	all Scene commands
+	all Block commands
+
+Plane Offset
+Plane Offset scrnr,planenr,xoffset,yoffset
+Sets the offset for a particular bitplane used by screen SCRNR.  X should always be even, allthough 
+an uneven value is possible.  This command can be used to program some interesting effects such 
+as interference without having to use the dual playfield mode or the slow Screen Copy commands.
+To set all offsets for all planes to zero, you should use the Plane Offset command with a negative 
+PLANENR parameter.  This is because I store the offset for each particular plane.  To reset the offset 
+of a particular plane, set the XOFFSET and YOFFSET parameters to zero.
+Ex.: to reset all offsets of screen 3 --> Plane Offset 3,-1,0,0
+to reset plane two of screen 1   --> Plane Offset 1,2,0,0
+See Plane Update for further information.
+
+Plane Swap 
+Plane Swap scrnr,plane1,plane2
+Swap PLANE1 with PLANE2  of screen SCRNR.  See Plane Update for further information.
+
+
+
+Plane Shift Up 
+Plane Shift Up scrnr,start To end
+Shifts the planes up by 1 from START to END used by screen SCRNR.
+Ex.:	PLANE1 = 55555
+	PLANE2 = 66666
+	PLANE3 = 77777
+	PLANE4 = 88888
+
+Plane Shift Up 1 To 3 will result in:
+	PLANE1 = 77777
+	PLANE2 = 55555
+	PLANE3 = 66666
+	PLANE4 = 88888
+See Plane Update for further information.
+
+Plane Shift Down 
+Plane Shift Down scrnr,start To end
+The opposite of Plane Shift Up.  Bitplanes from START to END are shifted downward one plane.
+See Plane Update for further information.
+
+Plane Update
+Plane Update scrnr
+This command is used to reflect the changes made with the Plane commands.  Normally you could 
+use the AMOS View command to display what is changed.  This is true for all Plane commands 
+except the Plane Offset command.  In fact the bitplane addresses are not changed at all.  Use Plane 
+Update instead of the AMOS View command.
+
+STARFIELDS
+
+TURBO PLUS allows you to define and control hundreds of individual points manually or under 
+interrupt control.  A TURBO PLUS starfield is a collection of one color stars (points) drawn on 
+bitplane one.  As such, only single coloured stars are possible.  You can change the color of them 
+with the Palette or Colour commands.  
+TURBO PLUS uses the main processor (the MC68000) for displaying the stars.  So if you own an 
+A3000 or accelerator board you can display many more.
+
+Limits on a 68000 system (7.14 Mhz):
+	If you use only an X SPEED (Y SPEED = 0), 670 stars can be displayed in 1 VBL.
+	If you use only an Y SPEED (X SPEED = 0), 660 stars can be displayed in 1 VBL.
+	If you use both speeds, 540 stars can be displayed in 1 VBL.
+
+For aesthetics, we suggest you limit a normal 320x200 size screen to 100 stars or less.  WIth more 
+stars the display starts to look crowded.  You will be saving more time for your AMOS program as 
+well. 
+
+Always be sure that you are displaying the stars on the screen where you reserved them because 
+the start offsets of every line from the current screen are precomputed when you call the Reserve 
+Stars command.
+example: Screen SSTARSCREEN : Display Stars
+
+
+Reserve Stars 
+Reserve Stars COUNT
+Reserves memory for COUNT star definitions for the current screen.  At this point you can reserve 
+memory for up to 4000 stars.  This command computes in advance the address of the start of every 
+line.  This is done for more speed when displaying the stars.  You can calculate the amount of 
+memory needed with this formula:
+COUNT*8+Heigth of screen*2
+So with 4000 stars in a 320 by 250 screen, 32500 bytes are reserved.
+For the average 320x200 screen you will need only about 150 stars for a nice display and good 
+speed.  More than 300 stars results in a crowded appearing display, and wasted computational time.
+
+Define Star
+Define Star nr,x,y,x speed,y speed
+Defines 'star' NR.  X and Y are the initial coordinates of the 'STAR'.  X SPEED and Y SPEED define 
+the speed of the 'STAR'.  XSPEED and YSPEED are added to the star's coordinates when you 
+Display them.  Your stars can fly in any direction.  Star definitions are put into FAST ram if available.
+
+Display Stars
+Displays the stars onto the screen and computes their next position, dependent on the X- and Y 
+SPEEDS.  
+Note: Display Stars is identical to:
+Stars Draw : Stars Compute.
+
+Stars Draw
+Displays the stars onto the screen without computing the next star position. So your stars can be 
+frozen without having to change the SPEED of them to 0.
+
+Stars Compute 
+Stars Compute start To end
+Computes the next position of the stars START to END without displaying them on the screen.
+
+Stars Speed
+Stars Speed start To end,x speed,y speed
+Changes the speed of stars numbered from START to END to X SPEED and Y SPEED.
+
+Stars Erase
+Gives back the memory used by the Reserve Stars command.  The memory used by the TURBO 
+PLUS stars is automatically erased from memory if you do a Default or if you leave AMOS.
+
+Stars Clip
+Stars Clip x,y,x1,y1
+The Stars Clip instruction limits all stars to a rectangular region of the screen.  X,Y represent the 
+coordinates of the top left corner of the rectangle, and X1,Y1 hold the coordinates of the bottom right 
+corner.
+
+Stars Int On 
+Stars Int On CLEAR
+This command adds a new interrupt server to the VBLANK server chain which will do the same thing 
+as the Display Stars command.  The Display Stars 	command will be executed every Vbl and run 
+totally independently of your AMOS program.  
+If CLEAR is not equal to 0 the display will be cleared before displaying the stars.  This is the 
+AUTOMATIC CLEAR MODE.  Only the the first bitplane, the 'starfield plane',  is cleared.  Always be 
+sure that the screen where you have reserved the stars remains open when the stars interrupt is on 
+or a crash will be certain!  This command stores the screen address of the screen where the Reserve 
+Stars command was executed, so the stars will only be displayed in that particular screen.
+With the stars interrupt, time is saved for your AMOS programs.  You do not have to wait for the Vbl 
+to synchronize the display of the stars with your screen display.
+Disadvantages: Only the X-speed is changed (for more speed).  Can not be used with Double 
+Buffered screens even if Autoback is set to 0 (zero).
+
+Stars Int Off
+Turn off the stars interrupt.
+
+WARNING:  It is very important that you do not start the Stars Interrupt in Direct mode!  A crash will 
+most certainly result.  It is also suggested you do not exit your program without turning Stars Int Off.  
+Turn Break Off and check for a key press to exit (Raw Key (69) works well for the esc key).  Then if 
+your program detects this key, it turns Stars Int Off and then Ends.  Save your programs often when 
+working with Stars Interrupts, mistakes can cause crashes!
+
+
+
+VECTOR OBJECTS
+A vector object is a series of connected lines drawn rapidly at machine language speeds.  You may 
+draw them at any screen position, magnification or reduction.
+
+OBJECT DEFINING
+
+·	We will define objects as a series of Move and Draw commands.  The 
+first step is to tell the system how many objects we want to define:
+
+Object Limit 
+Object Limit X
+Sets the maximum amount of objects. You MUST set the limit before you can reserve and define the 
+objects.  When X is set to zero, the OBJECT structure is erased from memory.  You can define up to 
+32.000 objects.  Old object files (from PD versions of TURBO) are compatible with the new ones.
+
+Reserve Object Chip 
+Reserve Object Chip object,count
+Reserves CHIP memory (COUNT*6 bytes) for object OBJECT.
+Ex.: you want to define object number 5 with 10 vectors (10 Draw or Move definitions)
+	Reserve Object Chip 5,10
+Always remember to set Object Limit first. 
+
+Reserve Object Fast 
+Reserve Object Fast object,count
+Reserves FAST memory (COUNT*6 bytes) object OBJECT.	
+
+There is a difference between the Chip Objects and Fast objects:
+The Chip Objects are loaded/defined into CHIPMEM and they can be saved into a file.  The Fast 
+Objects are defined into FASTMEM and they can NOT be saved into a file.  The fast objects draw a 
+bit faster.  They can be freely mixed.
+
+·	Next we define a particular object with Draw, Move and Attr commands.  
+End the object definition with a Stop
+
+Define Draw
+Define Draw object,element To x,y
+Defines vector ELEMENT in object OBJECT as a Draw instruction with X and Y as the coordinates.  
+Negative coordinates are legal.  A Draw instruction will have the effect of drawing a line.
+
+Define Move
+Define Move object,element To x,y
+Defines vector ELEMENT in object OBJECT as a Move instruction with X and Y as the coordinates.  
+Negative coordinates are legal.  A Move instruction does not draw a line but moves the vector cursor.
+
+Define Stop 
+Define Stop object,element
+Defines vector ELEMENT in object OBJECT as a Stop instruction.  In an object you can Reserve 
+memory for as many VECTORS as you wish, but you don't have to Define all the VECTORS in the 
+object at the beginning of your program.  Just put a Stop instruction as the LAST VECTOR.  You can 
+add some more VECTORS, just by replacing the Stop instruction by a Define Move, a Define Draw 
+or a Define Attr.
+Make sure that the last ELEMENT of an OBJECT definition is a Stop instruction!
+
+Define Attr 
+Define Attr object,element To colour,drawmode
+Defines vector ELEMENT in object OBJECT as an Attribute instruction.  Use it to change the Colour 
+and the Drawing-mode in an Object definition.  It is wise to make the first instruction of your object an 
+Attribute instruction.
+
+
+OBJECT DRAWING
+
+Object Draw 
+Object Draw object
+Draws object OBJECT as defined in the vector table to the current screen.
+
+R Object Draw 
+R Object Draw object,x,y
+Draws object OBJECT as defined in the vector table but relative to the X and Y coordinates.
+
+Object Mag Draw 
+Object Mag Draw object,mul
+Draws object OBJECT as defined in the vector table but the OBJECT coordinates are first multiplied 
+with factor MUL, increasing the size of the object.  If MUL is negative, the OBJECT coordinates are 
+divided by factor MUL, decreasing the size of the object.  This also give the appearance of depth, a 
+negative coordinate pushes the object away from the viewer, a positive increases the size, 
+apparently bringing it closer to the viewer.
+
+R Object Mag Draw 
+R Object Mag Draw OBJECT,X,Y,MUL
+Draws object OBJECT as defined in the vector table but relative to the X and Y coordinates and the 
+OBJECT coordinates are multiplied with factor MUL.  If you give a negative MUL factor the OBJECT 
+coordinates are divided by factor MUL.
+
+Object Erase
+Object Erase object
+Erases object definition OBJECT and frees the allocated memory.  If OBJECT is negative, ALL 
+object definitions are erased.	 The Object definitions are also automatically erased from memory if 
+you do a Default or if you leave AMOS.
+
+Object Save
+Object Save "name",start To end
+This instruction will save all DEFINED objects from object START to STOP into object-file "NAME".  
+If "NAME" > 80 chars nothing will happen.  If an object is not defined, it will skip to the next object 
+until END is reached.  It also writes the header "OBJE" at the beginning of the file.  Only Chip objects 
+can be saved.
+
+Object Load
+Object Load "name",start
+This instruction loads the file "NAME" and checks if it is an object file. (It checks for the header 
+"OBJE" at the beginning of the file.)  If it is an object file, it will define and load all object definitions 
+into objects from object number START.  How many objects are to be defined is taken out of the 
+object file.  It is important to give the FULL PATH name for this command.  If you wish to use the 
+current directory, use Object Load Dir$+"name",start
+Ex.:  Define Object Chip(1,20)
+     Define Object Chip(2,10)
+     Define Draw .....
+	"	"
+     Object Save "DF1:OBJECT1_TO_4",1 To 4
+     Object Load "DF1:OBJECT1_TO_4",5
+     This will define and load objects 5 to 8.
+      
+     Object Load "DF1:OBJECT1_TO_4",2 will not work.
+     First you must discard objects 2 to 5.
+BLOCKS
+
+The TURBO PLUS block commands are optimized commands for storing and drawing rectangular 
+areas of graphics.  You can cut a piece of screen area into a block with AMOS's Get Block 
+command.
+
+F Put Block 
+F Put Block block,x,y
+This a highly optimised general purpose block routine.  The X coordinate is chopped to ly on a 16 bit 
+boundary, and only partial clipping is supported.  It can handle Blocks of variable size.  Masking is 
+supported.
+Clipping:  If X or Y< 0 no Block is displayed.
+	If X or Y > width or height of screen, no Block is displayed.
+	If X < width of screen but X+width of Block > width of screen, the Block is partially 
+displayed. (clipped)
+	If Y < height of screen but Y+height of Block > heigth of screen, the Block is partially 
+displayed. (clipped)
+	The regular AMOS system stores Blocks as a linked list so with this command you will not 
+experience a tremendous speedup.  The processor has to search through the list to find the address 
+of the block to be displayed.  So, if you are using a lot of blocks this command will speedup things by 
+about 20-180%.  These timings may vary because of the type of Cpu you are using and depending 
+on the size of the Block and its number of colors.
+
+For a much better speed up, you may wish to convert the linked list of stored blocks into a static list:
+
+Reserve Static Block 
+Reserve Static Block X
+Reserves memory for converting AMOS's linked block-list into a static block-list. Reserves memory 
+for X blocks.  Be sure that you reserve enough memory for all entries.  X*8 bytes are reserved, 4 
+bytes for address block data and 4 bytes for its mask.
+
+Static Block Erase
+Static Block Erase
+Returns the memory used by the static block-list back to the system.
+
+Build Static Block
+Build Static Block
+Converts AMOS's linked block-list into a static block-list.  Be sure that you have reserved enough 
+memory for all entries.
+Ex.: you grabbed 50 blocks from a picture, so you should reserve memory for at least 50 entries.
+
+F Put Static Block
+F Put Static Block block,x,y
+This a highly optimised general purpose block routine.  The X coordinate is chopped to ly on a 16 bit 
+boundary, and only partial clipping is supported.  (See clipping above)  Masking is supported.
+Due to the way the Blocks are stored in a static list, you will have better timings.  The processor 
+doesn't has to search through the list to find the address of the block to be displayed.  So, if you are 
+using a lot of blocks this command will result in a speed up of 40-260% and more.  These timings 
+may vary because of the type of Cpu you are using and also depend on the size of the Block and its 
+depth. (number of colors)
+
+
+ICONS
+
+F Paste Icon
+F Paste Icon x,y,icon
+This a highly optimised general purpose icon routine.  The X coordinate is chopped to lie on a 16 bit 
+boundary, and only partial clipping is supported.  It can handle Icons of variable size.  Masks are 
+supported.
+If X < 0 no Icon is displayed.
+If Y < 0 no Icon is displayed.
+aIf X > width of screen, no Icon is displayed.
+If Y > height of screen, no Icon is displayed.
+If X < width of screen but X+width of Icon > width of screen, the Icon is partially displayed. (clipped)
+If Y < height of screen but Y+height of icon> heigth of screen, the Icon is partially displayed. (clipped)
+This routine is generally 2-3.5 times faster than the AMOS original one when no mask is used.  
+When used with a mask (Make Icon Mask) this routine is generally .8-2.8 times faster than the 
+original AMOS command.  These timings may vary because of the type of Cpu you are using and 
+also depend on the size of the Icon.
+
+F 16 Icon
+F 16 Icon x,y,icon
+This is a highly optimised special purpose Icon routine. This routine can only be used to display 
+Icons that are 1 to 16 pixels wide, of any height.  Masks are supported.
+The Icon Bank must be loaded with Icons and all Icons must be defined, if not a crash is possible.  
+I've disgarded all testing for best speed possible.  The X and Y coordinates are not chopped to lie on 
+a 16 bit boundary.  You can put them anywhere onto the screen.  This routine is generally 2.5-3.5 
+times faster than the original AMOS Paste Icon command when no mask is used.
+
+F 32 Icon 
+F 32 Icon x,y,icon
+This is a highly optimised special purpose Icon routine for 17 to 32 pixel wide icons only.  They may 
+be of any height.  It is exactly the same as the F 16 Icon command except for the size of the icons it 
+draws.
+
+F 16proc Icon
+F 16proc Icon x,y,icon
+This is a highly optimised special purpose Icon routine.  I don't use the BLITTER to put the Icon onto 
+the screen.  The MC680X0 processor is used instead.  The people who have a fast processor 
+(68020+) can take advantage of this routine to display the Icons faster than the BLITTER.  If 
+executed with a slower (68000/68010) processor, this routine is still faster than the normal AMOS 
+routine, which uses the BLITTER.  It is in most cases faster than the F 16 Icon routine (68020+).  
+People with a slower (68000/68010) processor should not use this routine. This routine can only be 
+used to display Icons that are 16 pixels wide.  Masking is not supported.  The Icon Bank must be 
+loaded with Icons and all Icons must be defined, if not a crash is possible.  I've disgarded all testing 
+for best speed possible.  The X and Y coordinates are chopped to lie on a 16 bit boundary, and 
+partial clipping is supported.
+	If X or Y < 0 no Icon is displayed.
+	If X or Y > width or height of screen no Icon is displayed.
+This routine is generally 3-5 times faster than AMOS Paste Icon.  (A1200 14 Mhz/ CACHE ON / NO 
+FASTRAM)
+
+F 32proc Icon 
+F 32proc Icon X,Y,icon
+Thiis is a highly optimised special purpose Icon routine.  This routine can only be used to display 
+Icons that are 32 pixels wide.  It is functionally identical to F 16proc Icon.
+
+To get the best speed on all AMIGA's you should use the F Paste Icon/F 16 Icon/ F 32 Icon 
+commands.  They use the BLITTER instead of the main cpu.  F 16proc Icon and F32proc Icon are 
+useful only for special applications that will not be run on slower Amigas.  
+
+X Icon
+r=X Icon(nr)
+This function returns the width (in words) of a particular Icon.
+
+Y Icon
+r=Y Icon(nr)
+This fuction returns the height (in lines) of a particular Icon.
+
+Planes Icon
+r=Planes Icon(nr)
+This function returns how many planes the Icon is made of.
+Ex.:	Screen Open 0,320,200,8,Lowres
+	Get Icon 1,0,0 To 64,100
+	DEPTH=Planes Icon(1)
+	'DEPTH will contain 3 since 8 colours need 3 bitplanes...
+
+=Icon Check
+r=Icon Check(x)
+Check to see if an icon is currently defined.  Trying to paste an icon that is not defined returns an 
+error in AMOS and AMOS Pro.  Use this function if you are not sure an icon exists.
+
+X is the Icon you want to check.  Icon Check returns 3 possible values.  If the bank is not reserved, in  
+AMOS you'll get an illegal function call.  But in AMOSPro you don't get an error, 0 is returned instead.
+
+	-1 indicates that the Icon is defined, and it has NO MASK.
+	1 indicates that the Icon is defined, and it has a MASK.
+	0 indicates that the Icon is NOT defined.
+
+It is also possible to check other Icon banks with it.  See the Scene Icon Bank command for more 
+clarification.   It can even check BOB/SPRITE banks, as the bank has the same format.
+
+SCENES
+
+Scene commands are used to display arrangements of icons.
+The following commands will allow you to manipulate scenes on screen quickly
+and easily.
+Scenes are synonymous with Maps in any other extension such as TOME.
+See the TURBO Scene Editor documentation for more details on the creation and
+theory of icon based Scenes.
+
+Because the docs are now only diskbased I'll explain how the 'Scenes' are
+organized in memory.
+
+StartAddressOfBank
+	Start+ 0	WORD X_WIDTH
+	Start+ 2	WORD Y_HEIGHT
+			Repeat X_WIDTH*YHEIGHT
+	Start+ 4,6,8,...   WORD ICONIMAGE_TO_DISPLAY-1
+			End Repeat	
+
+In version 1.0 of TURBO, the value that holds the iconimage to display, was
+stored as a BYTE value. Limiting the maximum amount of different Icons of
+a Scene to 256 (0 -> 255).
+Many users didn't like this limitation, so I changed the 'BYTE' Sceneformat
+to 'WORD' Sceneformat.
+So in theory, you could access 65536 Icons, but AMOS/Pro limits this to
+4096.
+
+In order to display a Scene onto a screen, you must have an icon bank (bank 2)
+loaded into memory and a bank containing the scene.  Use Scene Load to bring
+the scene into a memory bank.
+
+IMPORTANT: The commands with '16/32' are to be used with 16 * 16 pixels icons
+	   or 32 * 32 pixels icons.
+	   '16/32' in the commands below means there are acutally 2 commands.
+	   For example, Scene 16/32 Check means you may use either:
+
+	   Scene 16 Check for use with 16 * 16 pixels icons, and
+           Scene 32 Check for use with 32 * 32 pixels icons.
+
+Do not try to use one of the '16' commands with 32 * 32 pixels icons and vice versa
+or a crash will be certain!
+
+
+Reserve Scene BANKNR,WIDTH,HEIGHT
+
+Reserves a scene bank that can hold WIDTH * HEIGHT tiles.
+All tiles are set to zero (0).
+
+Scene Load 
+
+Scene Load "file",bank
+Load scene "file" into bank BANK.
+The Scene Bank is not set by this command, so you must use Scene Bank BANK
+afterwards.
+This is to allow more than one bank in memory at one time.
+The Listbank command will display the type of the bank as Scenery.
+Scenes can be saved along with your AMOS programs.
+Under AMOS, you must include the full pathname for Scene Load.
+If your are currently in the correct directory, Scene Load Dir$+"file", bank
+will work fine.
+
+This command is able to cope with both 'BYTE' and 'WORD' Sceneformats,
+allthough all Scene Rendering commands will in V2.0 will only work with
+'WORD' Sceneformats.
+See the Scene Convert command to convert V1.0 Scenes to V2.0.
+
+Hint: Once a Scene is loaded in an AMOS/Pro bank, it can be saved as a
+      normal bank, or even with your program!
+      So, in fact this command is only usefull to load 'alien' Scene banks.
+
+Scene Convert
+
+Scene Convert BANK_FROM To BANK_TO
+This command is used to convert the V1.0 'BYTE' Sceneformat to V2.0 'WORD'
+Sceneformat, so you don't have to throw away your 'old' work.
+When converted to the new V2.0 format, you may erase the bank containing the
+old V1.0 Sceneformat.
+
+
+Scene Bank 
+
+Scene Bank x
+This command is used to indicate in which bank the scene data is to be found.
+	Ex. Scene Bank 6
+Make sure you have both a scene bank and icon bank in memory or this command
+will return a Bank Not Reserved error.
+
+Scene 16/32 Draw 
+
+Scene 16/32 Draw  scenex, sceney, xamt, yamt, xscreen,yscreen
+This is a multi-purpose super fast Scene-drawing command.
+SCENEX and SCENEY are the start scene-coordinates.
+XAMT and YAMT define how many Icons are to be drawn onto the screen.  
+XSCREEN and YSCREEN are the screen coordinates where the to begin drawing.  
+XSCREEN/YSCREEN are chopped to lie on a 16/32 bit boundary.
+
+=Scene Check 
+
+=Scene Check x,y
+Returns Icon number in the scene at scene coordinates X,Y, minus 1.
+If you wish to paste the icon returned by this function, add 1!
+Icons in the scene can range from 0 to 65535, in theory...AMOS/Pro limits
+this to 4096.
+AMOS does not let you use icon 0 so you must add 1 to get the correct icon
+number.
+
+Scene Change 
+
+Scene Change x,y,v
+Changes tile at X,Y scene coordinates to V
+
+Scene Replace
+
+Scene Replace SC_BNK,XSTART,YSTART,XAMOUNT,YAMOUNT,IC_SEARCH,IC_REPLACE :
+ This is a SUPERFAST search and replace command.  It scans trough a
+ rectangular area of a Scene for every occurence of IC_SEARCH and if found
+ it replaces it with the IC_REPLACE value.
+ I'm using the main CPU for this routine, because the BLITTER cannot access
+ FASTRAM.
+ Ex.: to replace all icons 2 in the scene to 5.
+      Scene Replace 1,0,0,Scene X,Scene Y,2,5
+
+Scene Copy
+
+Scene Copy BANK_FROM,SCENEX,SCENEY,AMOUNTX,AMOUNTY To BANK_TO,SCENEX,SCENEY
+Copies a rectangular area from one scene bank to another.
+The Scene Banks may have different width and height, everything is
+checked for.
+Beware !  When Scene Copy is used on the SAME bank, be sure that the areas
+do NOT overlap.
+I'm using the main CPU for this routine, because the BLITTER cannot access
+FASTRAM.
+
+Scene Fill
+
+Scene Fill BANK,SCENEX,SCENEY,AMOUNTX,AMOUNTY,VALUE
+Fills a rectangular area of a scene bank with VALUE.
+I'm using the main CPU for this routine, because the BLITTER cannot access
+FASTRAM.
+
+Scene Icon Bank 
+
+Scene Icon Bank X
+Assign a new icon bank for use with the Scene commands.
+You may load several icon banks into memory and switch between them with
+this command.
+
+As an additional bonus, you may even use one bank to store all of your Icons,
+Bobs, and Sprites for a level!  Icons, Sprites, and Bobs are stored identically
+in memory.
+Load a number of icons into bank1, then append your Sprites and Bobs to the end
+of bank 1 (see AMOS's Load command for more info).  
+You now have a bank with as many icons and as many objects as you wish.
+Scene Icon Bank 1 will make the scene commands use bank 1 for its icon
+information.
+After the level is over, you can then load an entirely separate bank
+containing new icons and objects.
+  
+Scene Icon Bank is set to 2 (default setting, normal icon bank)
+	when you run a program.
+	when you call Default
+	This is done for compatibility with the 'older' TURBO_PLUS libs.
+
+Scene Palette
+
+Scene Palette X
+Bring in part or all of a bank's palette to the current screen, dependent on
+Scene Mask Palette.
+Icon/Bob banks are legal, but any other type of bank gives an illegal function
+call.
+The Scene Icon Bank command does not change the screen palette so you may wish
+to bring a new icon bank's palette to the current screen with this command.
+Scene Mask Palette is used if you wish to bring just certain colors into the 
+current screen.
+This command was created because Get Icon Palette will not get the palette from
+any bank besides the default icon bank (2).
+		      
+Scene Mask Palette
+
+Scene Mask Palette X  
+X is the mask for loading a new palette from a Scene Icon Bank.  Each BIT
+represents a colour.
+If a bit is set, the screen color will be replaced by the Scene Icon Bank
+color upon execution of the Scene Palette command.
+
+Ex:	Scene Mask Palette %10000000000000000000000000000111
+	Scene Palette x
+	This would change the actual screen colours 0,1,2 and 31 with new
+	ones from icon bank x
+
+As a further example, suppose you have a screen with 16 colours:
+	Colour 0 to 7 are used for the Bobs
+	Colour 8 to 15 are used for the Scene
+	Colour 16 to 31 are used for the Sprites
+With Scene Mask Palette %1111111100000000, colours 8 to 15 are changed with
+Scene Palette X.
+
+The Mask is set to -1 (all bits set) if you do a RUN or a DEFAULT. 
+
+=Scene X
+
+wid=Scene X
+returns the width of the scene. 
+
+=Scene Y
+
+hgt=Scene Y
+returns the height of the scene.
+
+
+SCENE DEFINITIONS
+
+These commands allow you to set up predefined unmovable displays of scene 
+data.  They are only valid for 16 pixel wide/high icons.
+
+Scene 16 Limit 
+
+Scene 16 Limit x
+allocates memory for the Scene 16 definitions.  X is the amount of definitions.
+When X is set to zero, the memory is given back to the system.
+There is no '32' counterpart for this command.
+
+Scene 16 Def 
+
+Scene 16 Def scr,n, scenex, sceney, xamt, yamt, xscreen, yscreen
+Does basically the same as Scene 16 Draw but the information is stored
+in a scene definition for use by Scene 16 Restore command.
+SCR is the screen where the scene will be drawn.
+N is the scene definition.
+There is no '32' counterpart for this command.
+
+Scene 16 Restore 
+
+Scene 16 Restore nr
+Draws scene definition NR onto the screen.
+There is no '32' counterpart for this command.
+
+
+VIEWPORT DEPENDENT COMMANDS
+
+These commands operate on a viewport as set up in the Scene 16/32 View 
+command.
+Keep in mind '16/32' means there are 2 commands in one!
+Scene 16/32 View means you may use either Scene 16 View, or Scene 32 View.
+Do not intermix 16 and 32 commands!
+
+Scene 16/32 View 
+
+Scene 16/32 View  scrnr,x1,y1 To x2,y2
+Sets up a view port in which to display scenes using Scene Do, Scene Left, Top,
+Right, and Bottom commands.
+It restricts the drawing of the Scenes to a limited area of the screen defined
+by the SCRNR parameter.
+X1/Y1 are the top left-hand corner coordinates and X2/Y2 are the bottom 
+right-hand corner coordinates.
+The X coordinates are automatically chopped to lie on a 16 bit boundary.
+This command has no effect on the Scene 16/32 Draw commands, because the area
+is defined within.
+
+Scene 16/32 Do
+
+Scene 16/32 Do xscene,yscene
+Used to fill up a screen, in the viewport set with the last Scene 16/32 view
+command, with a scene starting from scene-coordinates XSCENE/YSCENE.
+Keep in mind that the Icons are not clipped (not partially displayed).
+It is easy to predict how many Icons are going to be drawn onto the screen with 
+these 2 formula's.
+  For 16 * 16 pixels Icons -
+	((X2 and $FFF0)-(X1 and $FFF0))/16 gives X amount of Icons.
+	(Y2-Y1)/16 gives Y amount of Icons.
+  For 32 * 32 pixels Icons -
+	((X2 and $FFE0)-(X1 and $FFE0))/32 gives X amount of Icons.
+	(Y2-Y1)/32 gives Y amount of Icons.
+
+=Scene 16/32 Check
+
+=Scene 16/32 Check(x,y)
+Returns Icon number is in the scene according to the X and Y screen
+coordinates.
+
+Scene 16/32 Change 
+
+Scene 16/32 Change x,y,v
+Changes tile at X,Y screen coordinates to V.  The change made on screen and
+in the Scene bank.
+
+Scene 16/32 Left 
+
+Scene 16/32 Left xscene,yscene
+Does the same thing as the Scene 16/32 Do command, but is used to redraw only
+the Left edge of the area defined by the Scene 16/32 View command.
+
+Scene 16/32 Right
+
+Scene 16/32 Right xscene,yscene
+Redraws the Right edge of the scene as specified in the Scene View command.
+
+Scene 16/32 Top 
+
+Scene 16 /32 Top xscene,yscene
+Redraws the Top edge of the scene as specified in the Scene View command. 
+
+Scene 16/32 Bottom
+
+Scene 16/32 Bottom xscene,yscene
+Redraws the Bottom edge.
+
+Be careful with double buffering...the Icons are drawn onto the current screen
+defined by the SCRNR parameter in the view command, this is the Logical
+or Physical screen.
+Just do a Screen Swap if Autoback 0 is used, or Screen Copy Logic To Physic
+if Autoback 2 (default) is used.
+
+
+
+
+SCROLLING
+
+With TURBO PLUS Blit commands, you can smoothly scroll screen areas quickly, and even scroll 
+under interrupt control, with time saved for your basic programs.  It is suggested that you use Multi 
+No with these commands for the smoothest possible display.  See the scrolling demos and Multi No 
+for more information.
+
+WARNING: Do not use the Blitter Interrupt with the Scene 16/32 Do commands as they take more 
+than 1 VBL to finish.  The Blitter interrupt is executed every VBL. A crash will be certain because the 
+Scene commands own the Blitter and the Blitter interrupt wants to own it too, resulting in a lockup of 
+the system.  Other Scene commands, such as Scene Left work fine with the Blitter Interrupt 
+commands.
+
+Blit Left 
+Blit Left screen,x,y To x1,y1,shift
+Immediately executes the scroll as defined by the parameters.  Scroll the area on screen SCREEN 
+from X to Y to X1, Y1.  X coordinates are chopped to lie on a 16 bit boundary.  Even though this 
+command uses no precomputation (unlike below), this command is still much faster than the AMOS 
+Scroll command.  If SHIFT is positive the zone will be shifted to the right.  Negative values indicate 
+that the scrolling will be to the left.  SHIFT values range from -15 to +15.
+
+Blit Store Left 
+Blit Store Left screen,blitnr,x,y To x1,y1,shift
+Blit Store Left allows you to predefine up to 96 different horizontal scrolling zones.  Each of these 
+zones can be associated with a specific scrolling operation which is determined by the variable 
+SHIFT.  SCREEN defines the screen that you want to scroll.  BLITNR holds the number of the zone 
+and can range from 1 to 96.  X,Y refer to the coordinates of the top left-hand corner of the area to be 
+scrolled and X1,Y1 to the point diagonally opposite.  The routine automatically chops the X and X1 
+values so that they always lie on a 16 bit boundary.  Ex.: 198 will become 196 , 307 will become 304.   
+If SHIFT is positive the zone will be shifted to the right.  Negative values indicate that the scrolling will 
+be to the left.  SHIFT values range from -15 to +15.
+
+Blit Store Up
+Blit Store Up screen,blitnr,x,y To x1,y1,shift
+Identical to the Blit Store Left command, except it defines a vertical scroll.  The X values are clipped 
+to lie on 16 pixel boundaries.  The shift parameter operates a little differently than in Blit Store Left: 
+ If SHIFT is negative, the area defined by X,Y To X1,Y1 is scrolled up to Y-SHIFT.
+ If SHIFT ais positive, the area defined by X,Y To X1,Y1 is scrolled up to Y1+SCROLL.
+You have nothing to worry about with small scrolls, they will operate as expected.  With large scroll 
+offsets, this command behaves a little differently.
+With a shift of 1, the area scrolls down 1 pixel, with a shift of -1, up one pixel.
+
+An example to clarify this command:
+	 Blit Store Up 0,1,0,5 To 320,100,-50
+	 Multi Blit 1 To 1
+	 Huh ??? The screen isn't scrolling 50 pixels up !
+	 Nope...it's only scrolling 5 pixels up.
+	 Why? This keeps the command code simpler, and faster.
+	 This is the code in BASIC
+	 Y = 5
+	 SCROLL = -50
+	 Y = Y + SCROLL : REM giving -45
+	 If Y < 0 
+	    Y = 0
+	 Else
+	    If Y > Screen Heigth : Rem This part is for scrolling down
+	       Y = Screen Height : Rem when SCROLL is positive
+	    End IF
+	 End if
+	 So to scroll the screen 50 pixels up, use this Blit definition.
+	 Blit Store Up 0,1,0,50 To 320,100,-50
+
+Blit Store Up defintions, when executed with the Multi Blit command, are not enormously faster than 
+the AMOS Scroll/Screen Copy commands.  Blit Store Up is about 20% faster on an A1200, and 
+should be more on an older machine that is using a plain MC68000 processor.  (This is only true for 
+the Up scrolls, the Left scrolls are much faster !)  This is true when you are only using 1 blit definition 
+(1 scroll up).  But, if you have to scroll up more than 1 area it becomes much faster.
+Ex.:	You have defined 10 blitter definitions (left and up mixed)
+	To Scroll them all...
+	Just Multi Blit 1 To 10
+	Much faster than AMOS, due to precalculation and use of just 2 blitter channels.
+
+Multi Blit
+Multi Blit start To end
+The Multi Blit command scrolls the screen using the settings you have specified with the Blit Store 
+Left instruction.  START and END refer to the zones you wish to scroll.  Always be sure that the 
+screens where you have defined scrolling zones are OPEN when you use this command, if not a 
+crash will be certain.
+If you have defined only 1 zone you should type :
+	Multi Blit 1 To 1
+With this command you can scroll up to 96 zones in one go.
+Why is the Multi Blit command so much faster than the original AMOS Scroll command?  Speed is 
+gained on two points:
+   A) the BLITTER is fed directly with precalculated values.
+   B) TURBO Blit uses the A and D blitter channels, AMOS Scroll uses the B,C and D channels.
+
+Blit Speed
+Blit Speed blitnr,shift
+With this command you can change the SHIFT (speed) value after you have defined a scrolling zone. 
+Only use positive values, it determines itself if the defined scrolling zone is scrolling to the left or to 
+the right.  
+
+Blit Erase 
+Blit Erase blitnr
+Erases and frees the memory used by a particular scrolling zone.  If blitnr is negative, ALL blit 
+definitions are erased from memory.  All Blit definitions are automatically erased from memory if you 
+do a Default or if you leave AMOS.
+
+
+INTERRUPT DRIVEN SCROLLING
+
+Blit Int On 
+Blit Int On start To end
+This command adds a new interrupt server to the VBLANK server chain which will do the same thing 
+as the Multi Blit command.  So the Multi Blit command is now executed every Vbl and is running 
+totally independent of your AMOS program.  Always be sure that the screens where you have 
+defined scrolling zones are OPEN when you use this command, or a crash will be certain.
+The scrolling does not begin until Blit Int Wait is set False!  
+Advantages: 
+	Time is saved for your AMOS PROGRAMS.
+	You don't have to wait for the Vbl to synchronize the Scrolling with your screen display.
+
+WARNING:  It is very important that you do not start the Blitter Interrupt in Direct mode!  A crash will 
+most certainly result.  It is also suggested you do not exit your program without turning Blit Int Off.  
+Turn Break Off and check for a key press to exit (Raw Key (69) works well for the esc key).  Then if 
+your program detects this key, it turns Blit Int Off and then Ends.  Save your programs often when 
+working with Blitter Interrupts, mistakes can cause crashes!
+
+Blit Int Off
+Turn off the 'BLITTER' interrupt.  The interrupt is removed automatically if you Default or if you leave 
+AMOS.  This command does not change the Blit Int Wait status.
+
+Blit Int Wait
+Blit Int Wait True/False
+This command starts or stops the blitter interrupt execution.  At the start of your program (RUN) or 
+Default, Blit Int Wait is True, causing Blit Int On to WAIT until Blit Int Wait is False.
+To start a Blitter interrupt :
+define the blits with Blit Store Left
+execute the Blit Int On NR To NR command.
+Up to this point nothing will happen.  Now set the Blitter wait status to FALSE:
+	Blit Int Wait False
+The interrupt starts running.
+To temporarily disable the Blitter interrupt, just set the Blitter wait status to TRUE:
+	Blit Int Wait True.
+With Blit Int Wait True, you can change your blitter definitions.  A quicker method would be to use the 
+next command to point to a new definition, although with an entire range of blits, changing just one 
+would be easier with this command.
+
+Blit Int Change
+Blit Int Change start To end
+Allows you to change the blits that are executed within the interrupt scrolling system.  This way you 
+can change the scrolls being performed without turning the blitter interrupt off.  When you execute 
+this command, the new scrolls will be performed after the next vertical blank.
+
+This command is exactly the same as Blit Int On start to End, except it works while the interrupt is 
+being executed.
